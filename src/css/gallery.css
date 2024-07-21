@@ -1,0 +1,41 @@
+@import url('./reset.css');
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #0984e3;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.gallery-item {
+  flex-basis: calc(33.3% - 16px);
+  box-sizing: border-box;
+}
+
+.gallery-link {
+  display: block;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-image {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.gallery-image:hover {
+  transform: scale(1.05);
+}
