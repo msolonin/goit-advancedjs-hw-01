@@ -25,7 +25,7 @@ const onFormFieldChange = event => {
   const fieldName = event.target.name;
   const fieldValue = event.target.value;
 
-  formData[fieldName] = fieldValue;
+  formData[fieldName] = fieldValue.trim();
 
   localStorage.setItem('feedback-form-data', JSON.stringify(formData));
 };
