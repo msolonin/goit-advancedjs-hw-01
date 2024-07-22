@@ -1,4 +1,4 @@
-const feedbackFormEl = document.querySelector('.js-feedback-form');
+const feedbackFormEl = document.querySelector('.feedback-form');
 let formData = {};
 
 const fillFormFields = form => {
@@ -32,14 +32,17 @@ const onFormFieldChange = event => {
 
 const onFeedbackFormSubmit = event => {
   event.preventDefault();
-  const userEmailValue = document.querySelector('input[name="user_email"]').value;
-  const userMessageValue = document.querySelector('textarea[name="user_message"]').value;
+  const userEmailValue = document.querySelector('input[name="email"]').value;
+  const userMessageValue = document.querySelector('textarea[name="message"]').value;
   if (userEmailValue === '' || userMessageValue === '') {
       alert('Fill please all fields');
       return;
+  }else{
+      console.log(formData);
+      event.target.reset();
+      localStorage.removeItem('feedback-form-data');
   }
-  event.target.reset();
-  localStorage.removeItem('feedback-form-data');
+
 };
 
 feedbackFormEl.addEventListener('input', onFormFieldChange);

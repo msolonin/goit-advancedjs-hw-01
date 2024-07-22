@@ -11,19 +11,16 @@
 <!--    <p><a href="index.html">Go back</a></p>-->
     <load ="./partials/header.html" />
     <div class="container">
-      <form class="feedback-form js-feedback-form">
-        <input
-          name="user_email"
-          type="email"
-          class="feedback-form-input js-feedback-email"
-          placeholder="Введіть email"
-        />
-        <textarea
-          name="user_message"
-          class="feedback-form-message"
-          placeholder="Введіть повідомлення"
-        ></textarea>
-        <button class="feedback-form-submit">Відправити</button>
+      <form class="feedback-form" autocomplete="off">
+        <label>
+          Email
+          <input type="email" name="email" autofocus />
+        </label>
+        <label>
+          Message
+          <textarea name="message" rows="8"></textarea>
+        </label>
+        <button type="submit">Submit</button>
       </form>
     </div>
     <script type="module" src="./js/2-form.js"></script>
