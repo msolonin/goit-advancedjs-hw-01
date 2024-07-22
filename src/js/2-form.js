@@ -1,5 +1,5 @@
 const feedbackFormEl = document.querySelector('.feedback-form');
-let formData = {};
+let formData = {email: "", message: ""};
 
 const fillFormFields = form => {
   const formDataFromLS = JSON.parse(localStorage.getItem('feedback-form-data'));
